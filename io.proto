@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "/testpb";
+
+service IOService {
+  rpc Call (Input) returns (Output);
+}
+message Input {
+  string name = 1;
+  bool   fail = 2;
+}
+
+message Output {
+  string result = 1;
+}
+
